@@ -49,6 +49,9 @@ public class Driver {
         for (int i = 0; i < size; i++) {
             rg.fillOval((int) (i * 1.0 * displayWidth / size), displayBufferHeight / 2 + (int) (y[i] * displayHeight), 2, 2);
         }
+        
+        //save as .png
+        Driver.savePng(result, "1d tiled - " + seed + ".png");
 
         //display
         final JPanel panel = new JPanel() {
@@ -60,10 +63,7 @@ public class Driver {
             }
         };
         panel.setPreferredSize(new Dimension(displayWidth, displayHeight + displayBufferHeight));
-        Driver.display(panel);
-
-        //save as .png
-        Driver.savePng(result, "1d tiled - " + seed + ".png");
+        Driver.display(panel);        
     }
     
     private static void drawTiled1dAnimated() {
@@ -86,6 +86,9 @@ public class Driver {
             }
             images[i] = b;
         }
+        
+        //save as .gif
+        Driver.saveGif(images, "1d tiled animation - " + seed + ".gif");
 
         //display
         final JPanel panel = new JPanel() {
@@ -98,10 +101,7 @@ public class Driver {
             }
         };
         panel.setPreferredSize(new Dimension(scale, scale));
-        Driver.display(panel);
-
-        //save as .gif
-        Driver.saveGif(images, "1d tiled animation - " + seed + ".gif");
+        Driver.display(panel);        
     }
     
     private static void drawTiled2d() {
@@ -122,6 +122,9 @@ public class Driver {
                 result.setRGB(i, j, new Color(255 - v, 255 - v, v).getRGB());
             }
         }
+        
+        //save as .png
+        Driver.savePng(result, "2d tiled - " + seed + ".png");
 
         //display
         final JPanel panel = new JPanel() {
@@ -131,10 +134,7 @@ public class Driver {
             }
         };
         panel.setPreferredSize(new Dimension(width, height));
-        Driver.display(panel);
-
-        //save as .png
-        Driver.savePng(result, "2d tiled - " + seed + ".png");
+        Driver.display(panel);        
     }
 
     public static void display(JPanel panel) {

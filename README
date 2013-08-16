@@ -2,7 +2,7 @@ Perlin noise generator in Java by Hoten
 
 www.hotengames.com
 
-This library is capable of generating tileable perlin noise maps in one and two dimensions. 'Tileable' as in the edges connect seamless. For example, a 1-dimensional noise map could represent a line, and a tiled 1-dimensional noise map would represent a line that, when duplicated and laid side to side, would tile seamlessly.
+This library is capable of generating tileable perlin noise maps in one and two dimensions. 'Tileable' as in the edges connect seamlessly. For example, a 1-dimensional noise map could represent a line, and a tiled 1-dimensional noise map would represent a line that, when duplicated and laid side to side, would tile seamlessly.
 
 In the drivers package you will find a few examples. Those include a tiled 1d graph, a tiled animated 1d graph (2 dimensions - one is in time), and a tiled 2d image. See samples/ for sample images.
 
